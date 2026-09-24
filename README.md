@@ -20,6 +20,14 @@ The app runs entirely in-memory using an **H2 database** — no external databas
 
 ---
 
+<img width="1440" height="414" alt="image" src="https://github.com/user-attachments/assets/c9a0479b-15e0-4c40-97c2-c2d30c198468" />
+
+<img width="1440" height="516" alt="image" src="https://github.com/user-attachments/assets/85690af3-c1b7-493e-b20b-e5b5232da342" />
+<img width="1440" height="554" alt="image" src="https://github.com/user-attachments/assets/50ad61db-0563-4f02-9599-0ad74c4fcd88" />
+
+<img width="1440" height="602" alt="image" src="https://github.com/user-attachments/assets/734bdc7f-5308-40d0-9aad-9f64de9b986c" />
+
+
 ## Features
 
 ### 1. Payment Creation
