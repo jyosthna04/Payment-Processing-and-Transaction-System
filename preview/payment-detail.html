@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Payment Details - Payment System Preview</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Payment Processing System</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="payments.html">Payments</a>
+            <a href="create-payment.html" class="btn-nav">New Payment</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Payment Details</h1>
+        <p class="subtitle">Payment #4</p>
+
+        <div class="detail-card">
+            <div class="detail-row">
+                <span class="detail-label">Payment ID</span>
+                <span class="detail-value">4</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Customer Name</span>
+                <span class="detail-value">Bob Smith</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Amount</span>
+                <span class="detail-value">$150.00</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Payment Method</span>
+                <span class="detail-value">CARD</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Status</span>
+                <span class="detail-value">
+                    <span class="badge badge-success">SUCCESS</span>
+                </span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Payment Date</span>
+                <span class="detail-value">2024-01-15 13:20</span>
+            </div>
+        </div>
+
+        <div class="action-bar">
+            <a href="payments.html" class="btn">Back to List</a>
+            <button type="submit" class="btn btn-warning">Refund Payment</button>
+        </div>
+    </div>
+</body>
+</html>

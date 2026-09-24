@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Payments - Payment System Preview</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Payment Processing System</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="payments.html" class="active">Payments</a>
+            <a href="create-payment.html" class="btn-nav">New Payment</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>All Payments</h1>
+        <p class="subtitle">Complete payment history</p>
+
+        <table class="payment-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Amount</th>
+                    <th>Method</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>5</td>
+                    <td>Alice Johnson</td>
+                    <td>$300.00</td>
+                    <td>UPI</td>
+                    <td><span class="badge badge-pending">PENDING</span></td>
+                    <td>2024-01-15 14:30</td>
+                    <td><a href="payment-detail.html" class="btn-small">View</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Bob Smith</td>
+                    <td>$150.00</td>
+                    <td>CARD</td>
+                    <td><span class="badge badge-success">SUCCESS</span></td>
+                    <td>2024-01-15 13:20</td>
+                    <td><a href="payment-detail.html" class="btn-small">View</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Charlie Brown</td>
+                    <td>$75.00</td>
+                    <td>CASH</td>
+                    <td><span class="badge badge-danger">FAILED</span></td>
+                    <td>2024-01-15 11:10</td>
+                    <td><a href="payment-detail.html" class="btn-small">View</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diana Prince</td>
+                    <td>$500.00</td>
+                    <td>UPI</td>
+                    <td><span class="badge badge-warning">REFUNDED</span></td>
+                    <td>2024-01-14 16:45</td>
+                    <td><a href="payment-detail.html" class="btn-small">View</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Ethan Hunt</td>
+                    <td>$225.00</td>
+                    <td>CARD</td>
+                    <td><span class="badge badge-success">SUCCESS</span></td>
+                    <td>2024-01-14 09:15</td>
+                    <td><a href="payment-detail.html" class="btn-small">View</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Error - Payment System</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Payment Processing System</div>
+        <div class="nav-links">
+            <a th:href="@{/}">Dashboard</a>
+            <a th:href="@{/payments}">Payments</a>
+            <a th:href="@{/payments/new}" class="btn-nav">New Payment</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Something went wrong</h1>
+        <div class="alert alert-error" th:text="${error}">
+            An error occurred.
+        </div>
+        <div class="action-bar">
+            <a th:href="@{/}" class="btn">Go to Dashboard</a>
+            <a th:href="@{/payments}" class="btn btn-primary">View Payments</a>
+        </div>
+    </div>
+</body>
+</html>

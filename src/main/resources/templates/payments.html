@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Payments - Payment System</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Payment Processing System</div>
+        <div class="nav-links">
+            <a th:href="@{/}">Dashboard</a>
+            <a th:href="@{/payments}" class="active">Payments</a>
+            <a th:href="@{/payments/new}" class="btn-nav">New Payment</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>All Payments</h1>
+        <p class="subtitle">Complete payment history</p>
+
+        <div th:if="${payments.empty}" class="empty-state">
+            <p>No payments yet.</p>
+            <a th:href="@{/payments/new}" class="btn btn-primary">Create First Payment</a>
+        </div>
+
+        <table th:unless="${payments.empty}" class="payment-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Amount</th>
+                    <th>Method</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="p : ${payments}">
+                    <td th:text="${p.id}">1</td>
+                    <td th:text="${p.customerName}">John Doe</td>
+                    <td>$<span th:text="${#numbers.formatDecimal(p.amount, 1, 2)}">0.00</span></td>
+                    <td th:text="${p.paymentMethod}">UPI</td>
+                    <td>
+                        <span class="badge" th:text="${p.status}"
+                              th:classappend="${p.status.name() == 'SUCCESS'} ? 'badge-success' : (${p.status.name() == 'FAILED'} ? 'badge-danger' : (${p.status.name() == 'REFUNDED'} ? 'badge-warning' : 'badge-pending'))">
+                            PENDING
+                        </span>
+                    </td>
+                    <td th:text="${#temporals.format(p.paymentDate, 'yyyy-MM-dd HH:mm')}">2024-01-01 12:00</td>
+                    <td>
+                        <a th:href="@{'/payments/' + ${p.id}}" class="btn-small">View</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
